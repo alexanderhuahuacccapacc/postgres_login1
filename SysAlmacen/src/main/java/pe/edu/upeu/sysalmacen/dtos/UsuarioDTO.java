@@ -17,6 +17,10 @@ public class UsuarioDTO {
     @NotNull
     private String estado;
     private String token;
+    private String nombres;
+    private String apellidos;
+    private String email;
+    private String clave;
 
     public record CredencialesDto(String username, char[] clave) { }
 
