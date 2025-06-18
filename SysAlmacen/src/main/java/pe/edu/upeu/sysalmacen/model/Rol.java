@@ -19,7 +19,7 @@ public class Rol {
     @Id
     @Column(name = "id_rol")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idRol;
+    private Long id;
 
     @Column(name = "nombre", nullable = false, length = 60)
     @Enumerated(EnumType.STRING)

@@ -7,6 +7,7 @@ import {MainProductoComponent} from './main-producto/main-producto.component';
 import {FormxProductoComponent} from './main-producto/formx-producto/formx-producto.component';
 import {Not403Component} from './not403/not403.component';
 import {RegistrarSolicitudComponent} from './registrar-solicitud/registrar-solicitud.component';
+import {GestionarVisualizarComponent} from  './gestionar-visualizar/gestionar-visualizar.component'
 
 export const pagesRoutes: Routes = [
   { path: 'dashboard', component: DashboardComponent, /*canActivate: [certGuard]*/ },
@@ -18,10 +19,13 @@ export const pagesRoutes: Routes = [
     ],
     /*canActivate: [certGuard]*/
   },
-
   {
     path: 'registro',
     component: RegistrarSolicitudComponent
+  },
+  {
+    path: 'gestionar_visualizar',
+    component: GestionarVisualizarComponent
   },
 
   {
@@ -43,6 +47,5 @@ export const pagesRoutes: Routes = [
       { path: 'edit/:id', component: FormMarcaComponent },
     ],
   },*/
-
 
 ];

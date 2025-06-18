@@ -11,6 +11,7 @@ import pe.edu.upeu.sysalmacen.mappers.UsuarioMapper;
 import pe.edu.upeu.sysalmacen.model.Rol;
 import pe.edu.upeu.sysalmacen.model.Usuario;
 import pe.edu.upeu.sysalmacen.model.UsuarioRol;
+import pe.edu.upeu.sysalmacen.model.UsuarioRolPK;
 import pe.edu.upeu.sysalmacen.repository.ICrudGenericoRepository;
 import pe.edu.upeu.sysalmacen.repository.IUsuarioRepository;
 import pe.edu.upeu.sysalmacen.service.IRolService;
@@ -87,10 +88,12 @@ public class UsuarioServiceImp extends CrudGenericoServiceImp<Usuario, Long> imp
         iurService.save(u);
         */
 
-        iurService.save(UsuarioRol.builder()
-                .usuario(savedUser)
-                .rol(r)
-                .build());
+        UsuarioRolPK id = new UsuarioRolPK(savedUser, r);
+        UsuarioRol ur = UsuarioRol.builder()
+                .id(id)
+                .build();
+        iurService.save(ur);
+
         return userMapper.toDTO(savedUser);
     }
 }

@@ -86,6 +86,11 @@
         <mat-icon>commute</mat-icon>
         <span>Registro</span>
       </button>
+      <button class="myButton" mat-menu-item (click)="sidenav.toggle()"
+              routerLink="/pages/gestionar_visualizar" [routerLinkActive]="['active']" style="cursor: pointer">
+        <mat-icon>commute</mat-icon>
+        <span>gestionar-visualizar</span>
+      </button>
        <!--
       <mat-divider></mat-divider>
       <button class="myButton" mat-menu-item (click)="sidenav.toggle()"
