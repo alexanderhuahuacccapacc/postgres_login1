@@ -11,6 +11,8 @@ import {NgClass} from '@angular/common';
     MaterialModule,
     MatNavList,
     NgClass,
+    RouterLink,
+    RouterOutlet,
   ],
   templateUrl: './gestionar-visualizar.component.html',
   styleUrls: ['./gestionar-visualizar.component.css'],

@@ -1,0 +1,1 @@
+export { SolicitarCompra } from "./SolicitarCompra";

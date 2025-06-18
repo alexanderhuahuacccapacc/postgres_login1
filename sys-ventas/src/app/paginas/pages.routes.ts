@@ -8,6 +8,7 @@ import {FormxProductoComponent} from './main-producto/formx-producto/formx-produ
 import {Not403Component} from './not403/not403.component';
 import {RegistrarSolicitudComponent} from './registrar-solicitud/registrar-solicitud.component';
 import {GestionarVisualizarComponent} from  './gestionar-visualizar/gestionar-visualizar.component'
+import {AddGestionarComponent} from './gestionar-visualizar/add-gestionar/add-gestionar.component';
 
 export const pagesRoutes: Routes = [
   { path: 'dashboard', component: DashboardComponent, /*canActivate: [certGuard]*/ },
@@ -25,7 +26,10 @@ export const pagesRoutes: Routes = [
   },
   {
     path: 'gestionar_visualizar',
-    component: GestionarVisualizarComponent
+    component: GestionarVisualizarComponent,
+    children: [
+      { path: 'new', component: AddGestionarComponent }
+    ],
   },
 
   {

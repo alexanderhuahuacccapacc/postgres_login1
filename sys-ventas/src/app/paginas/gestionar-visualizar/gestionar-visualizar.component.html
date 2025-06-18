@@ -9,6 +9,7 @@
     </div>
   </div>
 </header>
+<router-outlet/>
 
 <!-- Layout principal -->
 <div class="main-layout">
@@ -32,7 +33,7 @@
 
         <!-- Barra de acciones -->
         <div class="action-bar">
-          <button mat-raised-button color="primary">
+          <button mat-raised-button color="primary" style="float: right" routerLink="/pages/gestionar_visualizar/new">
             <mat-icon>add</mat-icon> Nueva Solicitud
           </button>
           <div class="action-buttons">
